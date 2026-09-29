@@ -16,6 +16,7 @@ export default function HomePage() {
           style={{ objectFit: 'cover', zIndex: 0 }}
           priority
         />
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.3)', zIndex: 0 }}></div>
         <div className="hero-content" style={{ position: 'relative', zIndex: 1 }}>
           <h1 className="hero-title">MAHANAIM BIBLE<br />COLLEGE</h1>
           <p className="hero-subtitle">Church Of God (Full Gospel)<br />In India</p>
