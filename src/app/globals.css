@@ -82,7 +82,7 @@ a {
 /* =================== HERO SECTION =================== */
 .hero {
   min-height: 90vh;
-  background-color: var(--color-hero-bg);
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;

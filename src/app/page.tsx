@@ -9,7 +9,14 @@ export default function HomePage() {
 
       {/* =================== HERO SECTION =================== */}
       <section className="hero" id="home">
-        <div className="hero-content">
+        <Image
+          src="/images/campus_bg.jpg"
+          alt="Mahanaim Bible College Campus"
+          fill
+          style={{ objectFit: 'cover', zIndex: 0 }}
+          priority
+        />
+        <div className="hero-content" style={{ position: 'relative', zIndex: 1 }}>
           <h1 className="hero-title">MAHANAIM BIBLE<br />COLLEGE</h1>
           <p className="hero-subtitle">Church Of God (Full Gospel)<br />In India</p>
           <p className="hero-region">Central West Region</p>
