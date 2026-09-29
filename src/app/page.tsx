@@ -31,8 +31,15 @@ export default function HomePage() {
 
       {/* =================== PATRON SECTION (SPLIT) =================== */}
       <section className="patron-section">
-        <div className="patron-left">
-          <h2>Preparing<br />Laborers for<br />His Harvest</h2>
+        <div className="patron-left" style={{ position: 'relative' }}>
+          <Image
+            src="/images/hero-bg.jpg"
+            alt="Laborers for His Harvest"
+            fill
+            style={{ objectFit: 'cover', zIndex: 0 }}
+          />
+          <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(50, 50, 50, 0.85)', zIndex: 0 }}></div>
+          <h2 style={{ position: 'relative', zIndex: 1 }}>Preparing<br />Laborers for<br />His Harvest</h2>
         </div>
         <div className="patron-right">
           <div className="patron-image-container">
