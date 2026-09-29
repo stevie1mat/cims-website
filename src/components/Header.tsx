@@ -11,10 +11,11 @@ export default function Header() {
     <header className="header">
       <Link href="/" className="header-logo">
         <Image
-          src="/images/logo.svg"
+          src="/images/logo.png"
           alt="Mahanaim Bible College"
-          width={40}
-          height={40}
+          width={60}
+          height={60}
+          style={{ width: 'auto', height: '60px' }}
           priority
         />
       </Link>
