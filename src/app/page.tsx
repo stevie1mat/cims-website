@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Header from '@/components/Header'
+import FadeIn from '@/components/FadeIn'
 
 export default function HomePage() {
   return (
@@ -14,18 +15,27 @@ export default function HomePage() {
           alt="Mahanaim Bible College Campus"
           fill
           style={{ objectFit: 'cover', zIndex: 0 }}
+          className="hero-bg-img"
           priority
         />
-        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.3)', zIndex: 0 }}></div>
+        <div className="hero-overlay"></div>
         <div className="hero-content" style={{ position: 'relative', zIndex: 1 }}>
-          <h1 className="hero-title">MAHANAIM BIBLE<br />COLLEGE</h1>
-          <p className="hero-subtitle">Church Of God (Full Gospel)<br />In India</p>
-          <p className="hero-region">Central West Region</p>
-          <p className="hero-city">Mumbai</p>
-          <div className="hero-buttons">
-            <a href="https://cims.mbcmumbai.com" className="btn-magenta" target="_blank" rel="noopener noreferrer">MBC Portal</a>
-            <a href="#about-us" className="btn-green">About Us</a>
-          </div>
+          <FadeIn delay={100}>
+            <h1 className="hero-title">MAHANAIM BIBLE<br />COLLEGE</h1>
+          </FadeIn>
+          <FadeIn delay={300}>
+            <p className="hero-subtitle">Church Of God (Full Gospel)<br />In India</p>
+          </FadeIn>
+          <FadeIn delay={500}>
+            <p className="hero-region">Central West Region</p>
+            <p className="hero-city">Mumbai</p>
+          </FadeIn>
+          <FadeIn delay={700}>
+            <div className="hero-buttons">
+              <a href="https://cims.mbcmumbai.com" className="btn-magenta" target="_blank" rel="noopener noreferrer">MBC Portal</a>
+              <a href="#about-us" className="btn-green">About Us</a>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -39,132 +49,160 @@ export default function HomePage() {
             style={{ objectFit: 'cover', zIndex: 0 }}
           />
           <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(50, 50, 50, 0.85)', zIndex: 0 }}></div>
-          <h2 style={{ position: 'relative', zIndex: 1 }}>Preparing<br />Laborers for<br />His Harvest</h2>
+          <h2 style={{ position: 'relative', zIndex: 1 }}>
+            <FadeIn>Preparing<br />Laborers for<br />His Harvest</FadeIn>
+          </h2>
         </div>
         <div className="patron-right">
-          <div className="patron-image-container">
-            <Image
-              src="/images/patron.jpeg"
-              alt="Rev. E.P. Samkutty"
-              width={150}
-              height={150}
-              style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-            />
-          </div>
-          <h3 className="patron-name">REV. E.P SAMKUTTY</h3>
-          <div className="patron-role">
-            PATRON / OVERSEER<br />
-            CHURCH OF GOD (F.G) IN INDIA<br />
-            CENTRAL WEST REGION
-          </div>
+          <FadeIn delay={200}>
+            <div className="patron-image-wrapper">
+              <div className="patron-image-container">
+                <Image
+                  src="/images/patron.jpeg"
+                  alt="Rev. E.P. Samkutty"
+                  width={150}
+                  height={150}
+                  style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                />
+              </div>
+            </div>
+            <h3 className="patron-name">REV. E.P SAMKUTTY</h3>
+            <div className="patron-role">
+              PATRON / OVERSEER<br />
+              CHURCH OF GOD (F.G) IN INDIA<br />
+              CENTRAL WEST REGION
+            </div>
+          </FadeIn>
 
-          <div className="patron-message">
-            <p className="verse">
-              "All Scripture is God-breathed and is useful for teaching, rebuking, correcting and training in righteousness, so that the servant of God may be thoroughly equipped for every good work." 2 Timo 3:16,17.
-            </p>
+          <FadeIn delay={400}>
+            <div className="patron-message">
+              <p className="verse">
+                "All Scripture is God-breathed and is useful for teaching, rebuking, correcting and training in righteousness, so that the servant of God may be thoroughly equipped for every good work." 2 Timo 3:16,17.
+              </p>
 
-            <p>It is my great joy to welcome you to our Mahanaim Bible College website.</p>
+              <p>It is my great joy to welcome you to our Mahanaim Bible College website.</p>
 
-            <p>The mission of our Bible College is to prepare men and women who are deeply rooted in the Word of God, empowered by the Holy Spirit, and committed to serving Christ with integrity, humility, and excellence. In a world that is constantly changing, the need for faithful, Spirit-filled leaders has never been greater.</p>
+              <p>The mission of our Bible College is to prepare men and women who are deeply rooted in the Word of God, empowered by the Holy Spirit, and committed to serving Christ with integrity, humility, and excellence. In a world that is constantly changing, the need for faithful, Spirit-filled leaders has never been greater.</p>
 
-            <p>Through sound biblical teaching, practical ministry training, and spiritual formation, we seek to equip students to proclaim the Gospel, plant and strengthen churches, and serve communities with the love of Christ.</p>
+              <p>Through sound biblical teaching, practical ministry training, and spiritual formation, we seek to equip students to proclaim the Gospel, plant and strengthen churches, and serve communities with the love of Christ.</p>
 
-            <p>Christian education is a lifelong process of learning God's Word, growing in Christ, and serving Him faithfully. It strengthens the church, equips believers for ministry, protects against false doctrine, and prepares Christians to fulfill God's mission in the world.</p>
+              <p>Christian education is a lifelong process of learning God's Word, growing in Christ, and serving Him faithfully. It strengthens the church, equips believers for ministry, protects against false doctrine, and prepares Christians to fulfill God's mission in the world.</p>
 
-            <p>I invite you to explore our programs and become part of this journey of learning, growing, and serving. May God guide you as you seek His will, and may He use this institution to prepare laborers for His harvest.</p>
+              <p>I invite you to explore our programs and become part of this journey of learning, growing, and serving. May God guide you as you seek His will, and may He use this institution to prepare laborers for His harvest.</p>
 
-            <p>May the Lord richly bless you.</p>
-          </div>
+              <p>May the Lord richly bless you.</p>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* =================== ABOUT SECTION (FLOATING) =================== */}
       <section className="about-section-container" id="about-us">
         <div className="about-card">
-          <h2>Our History</h2>
-          <p>The Mahanaim Bible College (formerly known as Mahanaim Bible Training Centre) was established in 1983 with a great burden and vision to reach the unreached in India. This vision of Pr. A. Mathai, the former Overseer was unravelled at God's appropriate time that Mahanaim Bible College was accredited by the International Association for Theological Accreditation (IATA) in 2018. It is a significant landmark in the Church of God Central West Region.</p>
+          <FadeIn>
+            <h2>Our History</h2>
+            <p>The Mahanaim Bible College (formerly known as Mahanaim Bible Training Centre) was established in 1983 with a great burden and vision to reach the unreached in India. This vision of Pr. A. Mathai, the former Overseer was unravelled at God's appropriate time that Mahanaim Bible College was accredited by the International Association for Theological Accreditation (IATA) in 2018. It is a significant landmark in the Church of God Central West Region.</p>
 
-          <p>It is estimated that there are still unreached villages where the Good-news needs to be preached. The graduates of the MBC were sent out to proclaim the Goodnews to reach the lost and trodden in India.</p>
+            <p>It is estimated that there are still unreached villages where the Good-news needs to be preached. The graduates of the MBC were sent out to proclaim the Goodnews to reach the lost and trodden in India.</p>
 
-          <p>Its top priority is to train 'Native Missionaries' and send them to areas where they are familiar with the local language, culture, customs and traditions. Church of God recognizes the success of the 'Native Missionaries' work in their mission fields. Mahanaim Bible College is now proud to have sent hundreds of qualified staff to various parts of India as well as the world.</p>
+            <p>Its top priority is to train 'Native Missionaries' and send them to areas where they are familiar with the local language, culture, customs and traditions. Church of God recognizes the success of the 'Native Missionaries' work in their mission fields. Mahanaim Bible College is now proud to have sent hundreds of qualified staff to various parts of India as well as the world.</p>
+          </FadeIn>
         </div>
       </section>
 
       {/* =================== COURSES SECTION =================== */}
       <section className="courses-section" id="courses">
         <div className="courses-header">
-          <h2>Our Courses</h2>
-          <p>The courses which are currently offered by MBC Mumbai and also courses that are coming soon.</p>
+          <FadeIn>
+            <h2>Our Courses</h2>
+            <p>The courses which are currently offered by MBC Mumbai and also courses that are coming soon.</p>
+          </FadeIn>
         </div>
 
         <div className="courses-grid">
           {/* CIMS */}
-          <div className="course-card">
-            <Image
-              src="/images/badge-cims.png"
-              alt="CIMS Badge"
-              width={100}
-              height={100}
-              className="course-badge"
-            />
-            <h3 className="course-title">
-              <span>CIMS</span>
-              Certificate In Ministerial<br />Studies
-            </h3>
-            <p className="course-desc">Certificate In Ministerial Studies is the ongoing online course of MBC.</p>
-            <p className="course-req">Requirement: 12th<br />Passed (English)</p>
-          </div>
+          <FadeIn delay={100}>
+            <div className="course-card">
+              <div className="course-badge-wrapper">
+                <Image
+                  src="/images/badge-cims.png"
+                  alt="CIMS Badge"
+                  width={90}
+                  height={90}
+                  className="course-badge"
+                />
+              </div>
+              <h3 className="course-title">
+                <span>CIMS</span>
+                Certificate In Ministerial<br />Studies
+              </h3>
+              <p className="course-desc">Certificate In Ministerial Studies is the ongoing online course of MBC.</p>
+              <p className="course-req">Requirement: 12th<br />Passed (English)</p>
+            </div>
+          </FadeIn>
 
           {/* C.Min */}
-          <div className="course-card">
-            <Image
-              src="/images/badge-cmin.png"
-              alt="C.Min Badge"
-              width={100}
-              height={100}
-              className="course-badge"
-            />
-            <h3 className="course-title">
-              <span>C.Min</span>
-              Certificate In<br />Ministries
-            </h3>
-            <p className="course-desc">Certificate In Ministries is a 1 year course offered by MBC.</p>
-            <p className="course-req">Requirement: Studied in<br />any Bible College</p>
-          </div>
+          <FadeIn delay={200}>
+            <div className="course-card">
+              <div className="course-badge-wrapper">
+                <Image
+                  src="/images/badge-cmin.png"
+                  alt="C.Min Badge"
+                  width={90}
+                  height={90}
+                  className="course-badge"
+                />
+              </div>
+              <h3 className="course-title">
+                <span>C.Min</span>
+                Certificate In<br />Ministries
+              </h3>
+              <p className="course-desc">Certificate In Ministries is a 1 year course offered by MBC.</p>
+              <p className="course-req">Requirement: Studied in<br />any Bible College</p>
+            </div>
+          </FadeIn>
 
           {/* C.Th */}
-          <div className="course-card">
-            <Image
-              src="/images/badge-cth.png"
-              alt="C.Th Badge"
-              width={100}
-              height={100}
-              className="course-badge"
-            />
-            <h3 className="course-title">
-              <span>C.Th</span>
-              Certificate In<br />Theology
-            </h3>
-            <p className="course-desc">Certificate In Theology is a 2 year course offered by MBC.</p>
-            <p className="course-req">Requirement: Xth<br />Passed Hindi/English</p>
-          </div>
+          <FadeIn delay={300}>
+            <div className="course-card">
+              <div className="course-badge-wrapper">
+                <Image
+                  src="/images/badge-cth.png"
+                  alt="C.Th Badge"
+                  width={90}
+                  height={90}
+                  className="course-badge"
+                />
+              </div>
+              <h3 className="course-title">
+                <span>C.Th</span>
+                Certificate In<br />Theology
+              </h3>
+              <p className="course-desc">Certificate In Theology is a 2 year course offered by MBC.</p>
+              <p className="course-req">Requirement: Xth<br />Passed Hindi/English</p>
+            </div>
+          </FadeIn>
 
           {/* B.Th */}
-          <div className="course-card">
-            <Image
-              src="/images/badge-bth.png"
-              alt="B.Th Badge"
-              width={100}
-              height={100}
-              className="course-badge"
-            />
-            <h3 className="course-title">
-              <span>B.Th</span>
-              Bachelor Of<br />Theology
-            </h3>
-            <p className="course-desc">Bachelor Of Theology is a 3 year course offered by MBC.</p>
-            <p className="course-req">Requirement: 12th<br />Passed (English)</p>
-          </div>
+          <FadeIn delay={400}>
+            <div className="course-card">
+              <div className="course-badge-wrapper">
+                <Image
+                  src="/images/badge-bth.png"
+                  alt="B.Th Badge"
+                  width={90}
+                  height={90}
+                  className="course-badge"
+                />
+              </div>
+              <h3 className="course-title">
+                <span>B.Th</span>
+                Bachelor Of<br />Theology
+              </h3>
+              <p className="course-desc">Bachelor Of Theology is a 3 year course offered by MBC.</p>
+              <p className="course-req">Requirement: 12th<br />Passed (English)</p>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -172,23 +210,31 @@ export default function HomePage() {
       <section className="why-section" id="why-mbc">
         <div className="why-inner">
           <div className="why-left">
-            <h2>Why Choose<br />MBC?</h2>
+            <FadeIn>
+              <h2>Why Choose<br />MBC?</h2>
+            </FadeIn>
           </div>
           <div className="why-right">
-            <div className="why-item">
-              <h3>Online Mode Of Courses</h3>
-              <p>Exclusive online availability of courses with unique student - teacher portal, videos, E-library and study material enhances the quality of online learning experience.</p>
-            </div>
+            <FadeIn delay={100}>
+              <div className="why-item">
+                <h3>Online Mode Of Courses</h3>
+                <p>Exclusive online availability of courses with unique student - teacher portal, videos, E-library and study material enhances the quality of online learning experience.</p>
+              </div>
+            </FadeIn>
 
-            <div className="why-item">
-              <h3>Experienced Faculty</h3>
-              <p>Learn from dedicated and experienced faculty members who are committed to nurturing the next generation of ministry leaders with both academic excellence and spiritual depth.</p>
-            </div>
+            <FadeIn delay={300}>
+              <div className="why-item">
+                <h3>Experienced Faculty</h3>
+                <p>Learn from dedicated and experienced faculty members who are committed to nurturing the next generation of ministry leaders with both academic excellence and spiritual depth.</p>
+              </div>
+            </FadeIn>
 
-            <div className="why-item">
-              <h3>Scholarship Available</h3>
-              <p>Offers scholarship for eligible applicants from the Church Of God (Full Gospel) In India, Central West Region.</p>
-            </div>
+            <FadeIn delay={500}>
+              <div className="why-item">
+                <h3>Scholarship Available</h3>
+                <p>Offers scholarship for eligible applicants from the Church Of God (Full Gospel) In India, Central West Region.</p>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -202,22 +248,12 @@ export default function HomePage() {
           </div>
 
           <div className="footer-col">
-            <h4>Locate/Get Directions</h4>
-            <p>Diva, Thane, Maharashtra 400612<br />Google Map: <a href="#" style={{textDecoration: 'underline'}}>Click Here To Get Map</a></p>
-          </div>
-
-          <div className="footer-col">
             <h4>Important Links</h4>
             <ul>
               <li><Link href="#home">Home</Link></li>
               <li><Link href="#about-us">About Us</Link></li>
               <li><Link href="#courses">Courses</Link></li>
             </ul>
-          </div>
-
-          <div className="footer-col">
-            <h4>News</h4>
-            <p>MBC has resumed the courses. Admissions are open for the academic year 2026.</p>
           </div>
 
           <div className="footer-col">
